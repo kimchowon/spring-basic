@@ -32,4 +32,13 @@ public class ConfigurationSingletonTest {
         assertThat(memberRepository1).isSameAs(memberRepository2);
         assertThat(memberRepository2).isSameAs(memberRepository);
     }
+
+    @Test
+    @DisplayName("AppConfig.class의 클래스타입 확인하기")
+    void configurationDeep() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean = " + bean.getClass());
+    }
 }
