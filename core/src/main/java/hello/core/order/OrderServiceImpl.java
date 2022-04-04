@@ -12,10 +12,11 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    @Autowired
+
     // 자동 의존관계 주입
     // 스피링이 파라미터 타입에 맞는 빈을 가져와서 자동으로 주입해준다.
     // ac.getBean(MemberRepository.class) 와 비슷함
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
