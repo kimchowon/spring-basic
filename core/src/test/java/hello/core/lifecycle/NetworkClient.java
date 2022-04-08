@@ -4,7 +4,6 @@ public class NetworkClient {
 
     private String url;
 
-
     public NetworkClient() {
         System.out.println("생성자 호출, url = " + url);
         connect();
